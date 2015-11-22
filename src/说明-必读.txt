@@ -1,0 +1,41 @@
+注意：下面的这些文件，由于内部是绝对路径，所以只能在谢雪勇的电脑上运行。
+       其他人，需要先修改路径，才能用。
+1.switch.py                 切换平台
+2.limebuildSerially        	自动发布6个渠道的apk、swf、so文件
+3.limetest.py               发布一个选择渠道的apk 
+4.createapkso.py       		一个命令，连续生成6个平台的apk、so、swf
+5.createDiffAssets__withGit.py         通过git，打包tag之间的差异文件
+6.create__ZipExcels___Quickly.py       生成更新文件、updateExcel、channelExcel
+7.createGradeExcel.py       生成大更新Excel
+8.createUpdateExcel.py       生成小更新Excel
+9.createChannelExcel.py       生成渠道当前版本号channelExcel
+
+==========================================================================================
+打包顺序
+1.createapkso.py       					一个命令，连续生成6个平台的apk、so、swf
+2.git 									当前版本，打tag
+3.createDiffAssets__withGit.py          通过git，打包tag之间的差异文件
+4.（小更新）create__ZipExcels___Quickly.py       生成更新文件、updateExcel、channelExcel
+4.（大更新）createGradeExcel.py         生成大更新Excel
+5.createChannelExcel.py       			生成渠道当前版本号channelExcel
+6.上传文件至ftp和配表至服务器。
+
+=============================================================================================
+独立分支打包
+在一个新分支上，一般会切换GlobalConfig.py,达到在新分支独立操作的效果。但是tag不能和其他分支重复。
+1.appendUpdateExcel      在update.xlsx后追加新分支上的更新文件 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
