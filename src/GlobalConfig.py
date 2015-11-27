@@ -4,9 +4,9 @@
 #是否是调试版so
 debug = False;
 #版本tag集合
-alltags = ['v1.5.0b','v1.5.1b','v1.5.2b','v1.5.3b','v1.5.4b','v1.5.7b','v1.5.8b','v1.5.10b','v1.5.11b','v1.5.12b','v1.5.13b','v1.5.14b','v1.5.15b','v1.5.16b']
+alltags = ['v1.5.0b','v1.5.1b','v1.5.2b','v1.5.3b','v1.5.4b','v1.5.7b','v1.5.8b','v1.5.10b','v1.5.11b','v1.5.12b','v1.5.13b','v1.5.14b','v1.5.15b','v1.5.16b','v1.5.17b','v1.5.18b']
 #所有的渠道名
-channels = ['putaogame','xiaomi','ali','letv','chinamobile','dangbei']
+channels = ['putaogame','dangbei','xiaomi','ali','letv','chinamobile']
 #用于切换渠道
 channelIndex= {'chinamobile':1,'xiaomi':2,'ali':3,'letv':4,'putaogame':5,'lovegame':6,'dangbei':7}
 oldTags = alltags[0:len(alltags)-1]
@@ -25,7 +25,7 @@ whoUsePutao=[2,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,24,25,26,27,28,29,30
 useRelation = {'ali':whoUseAli,'chinamobile':whoUseChinamobile,'xiaomi':whoUseXiaomi,'putaogame':whoUsePutao,'letv':whoUseLetv,'dangbei':whoUseDangbei}
 #useRelation = {'ali':whoUseAli,'chinamobile':whoUseChinamobile,'xiaomi':whoUseXiaomi,'letv':whoUseLetv}
 #idHead从1或者100000开始，防止在本次更新期间有玩家升级上次的小更新。
-idHead = 3335#上次是3335
+idHead = 10000#上次是10000
 
 projectPath = '/cygdrive/e/workspace/PtSanguo_SVN'#项目目录
 diffAssetsPath = '/cygdrive/e/workspace/PtSanguo_SVN/releaseFold'#存放差异文件的目录
