@@ -4,9 +4,9 @@
 #是否是调试版so
 debug = False;
 #版本tag集合
-alltags = ['v1.5.0b','v1.5.1b','v1.5.2b','v1.5.3b','v1.5.4b','v1.5.7b','v1.5.8b','v1.5.10b','v1.5.11b','v1.5.12b','v1.5.13b','v1.5.14b','v1.5.15b','v1.5.16b','v1.5.17b','v1.5.18b']
+alltags = ['v1.5.0b','v1.5.1b','v1.5.2b','v1.5.3b','v1.5.4b','v1.5.7b','v1.5.8b','v1.5.10b','v1.5.11b','v1.5.12b','v1.5.13b','v1.5.14b','v1.5.15b','v1.5.16b','v1.5.17b','v1.5.18b','v1.5.19b']
 #所有的渠道名
-channels = ['putaogame','dangbei','xiaomi','ali','letv','chinamobile']
+channels = ['putaogame','dangbei','xiaomi','ali','chinamobile','letv']
 #用于切换渠道
 channelIndex= {'chinamobile':1,'xiaomi':2,'ali':3,'letv':4,'putaogame':5,'lovegame':6,'dangbei':7}
 oldTags = alltags[0:len(alltags)-1]

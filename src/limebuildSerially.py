@@ -20,8 +20,9 @@ def createApkSoFlash(channelIndex,channelSuffix):
     shutil.copyfile(win_soPath, win_targetSoPath+"/libApplicationMain-%s.so"%(channelSuffix))
     #葡萄版本，打一个flash
     if channelSuffix=='putaogame' or channelSuffix=='dangbei' or channelSuffix=='lovegame':
-        os.system('lime build flash')
-        shutil.copyfile(win_swfPath, win_targetApkPath+"/PtSanguo-%s-%s.swf"%(channelSuffix,timestr))
+        #os.system('lime build flash')
+        #shutil.copyfile(win_swfPath, win_targetApkPath+"/PtSanguo-%s-%s.swf"%(channelSuffix,timestr))
+        print 'create flash'
     
 def changeAndroidFoldName(debug):
     debugPath = win_projectPath+"/export/android_debug"

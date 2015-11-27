@@ -1,7 +1,7 @@
 # -*- coding:utf-8 -*-
 #! /usr/bin/python
 
-excelpath = u'E:/workspace/PtSanguo_SVN/releaseFold/updatefile/'    #u'E:\Walls of the world\Excel-content\\'
+excelpath = u'E:/workspace/PtSanguo_SVN/releaseFold2/updatefile/'    #u'E:\Walls of the world\Excel-content\\'
 excelnames = [u'core_update',u'core_channel']# core_upgrade
 startrow = 2#起始行
 startcolumn = 1#起始列
