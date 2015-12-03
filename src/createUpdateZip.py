@@ -55,5 +55,8 @@ def createChannelUpdateFile(channelName,extractFold,oldTag,targetTag):
 def mergeEveryAssetsSo():
     for tag in oldTags:
         mergeOneAssetsSo(tag,targetTag)
+        
+if __name__ == '__main__':
+    mergeEveryAssetsSo()
      
-mergeEveryAssetsSo()
+

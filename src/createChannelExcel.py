@@ -39,8 +39,8 @@ def createChannelVersionExcel():
             print 'channel in excel : '+str(channel)
             modifyChannelVersion(str(channel),targetTag,ws)
     wb.save(win_updateFilePath+'/core_channel.xlsx')
-        
-createChannelVersionExcel()  
+if __name__ == '__main__':        
+    createChannelVersionExcel()  
 
     
     
