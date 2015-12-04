@@ -24,6 +24,6 @@ def removeFileInFirstDir(targetDir,exceptFiles=[]):
 removeFileInFirstDir(win_diffAssetsPath,['updatefile'])
 removeFileInFirstDir(win_updateFilePath,['core_channel.xlsx','core_update.xlsx'])
 #处理各个渠道的更新包
-#for channel in channels:
-    #createApkSoFlash(channelIndex[channel],channel)
+for channel in channels:
+    createApkSoFlash(channelIndex[channel],channel)
     

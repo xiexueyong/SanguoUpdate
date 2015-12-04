@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 from gitutil import gitUtil # getCurBranch
 
-branch='dataeyeUpdate'#'dataeyeUpdate'  '720'
+branch='720'#'dataeyeUpdate'  '720'
 if gitUtil.getCurBranch() != branch:
     print '不在指定的分支，请重新指定分支'
     branch='错误'
