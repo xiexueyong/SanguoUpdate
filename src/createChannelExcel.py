@@ -22,7 +22,7 @@ def modifyChannelVersion(channelID,version,ws):
         version_e = ws.cell(row = i, column = 4)
         id_e = ws.cell(row = i, column = 1)
         #print id_e.value,version_e.value,"    ",channelID,version
-        if id_e.value == channelID:
+        if id_e.value == channelID or str(id_e.value) == channelID:
             print channelID
             version_e.value = version
     
