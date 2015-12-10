@@ -15,12 +15,12 @@ if branch=='720':
     #版本tag集合
     alltags = ['v1.5.0b','v1.5.1b','v1.5.2b','v1.5.3b','v1.5.4b','v1.5.7b','v1.5.8b','v1.5.10b','v1.5.11b','v1.5.12b','v1.5.13b','v1.5.14b','v1.5.15b','v1.5.16b','v1.5.17b','v1.5.18b','v1.5.19b','v1.5.20b','v1.5.21b','v1.5.22b','v1.5.25b','v1.5.26b','v1.5.27b']
     #所有的渠道名
-    channels = ['putaogame','dangbei','xiaomi','ali','chinamobile','letv']
+    channels = ['putaogame','xiaomi','ali','chinamobile','letv','dangbei']
     #用于切换渠道
     channelIndex= {'chinamobile':1,'xiaomi':2,'ali':3,'letv':4,'putaogame':5,'lovegame':6,'dangbei':7}
     oldTags = alltags[0:len(alltags)-1]
     targetTag = alltags[len(alltags)-1]
-    #用不同更新素材的渠道id集合,1,3,37,88四个id废弃不用
+    #用不同更新素材的渠道id集合,37,88四个id废弃不用
     whoUseLetv=[4]
     whoUseChinamobile=[5]
     whoUseLovegame=[6]
@@ -34,7 +34,7 @@ if branch=='720':
     useRelation = {'ali':whoUseAli,'chinamobile':whoUseChinamobile,'xiaomi':whoUseXiaomi,'putaogame':whoUsePutao,'letv':whoUseLetv,'dangbei':whoUseDangbei}
     #useRelation = {'ali':whoUseAli,'chinamobile':whoUseChinamobile,'xiaomi':whoUseXiaomi,'letv':whoUseLetv}
     #idHead从1或者100000开始，防止在本次更新期间有玩家升级上次的小更新。
-    idHead = 70000#上次是10000
+    idHead = 80000#上次是10000
     
     projectPath = '/cygdrive/e/workspace/PtSanguo_SVN'#项目目录
     diffAssetsPath = '/cygdrive/e/workspace/PtSanguo_SVN/releaseFold'#存放差异文件的目录
@@ -70,10 +70,10 @@ elif branch=='dataeyeUpdate':
     channelIndex= {'chinamobile':1,'xiaomi':2,'ali':3,'letv':4,'putaogame':5,'lovegame':6,'dangbei':7}
     oldTags = alltags[0:len(alltags)-1]
     targetTag = alltags[len(alltags)-1]
-    #用不同更新素材的渠道id集合,1,3,37三个id废弃不用
+    #用不同更新素材的渠道id集合,37,88三个id废弃不用
     whoUseLetv=[4]
     whoUseChinamobile=[5]
-    whoUseLovegame=[6]
+    whoUseLovegame=[6,3]
     whoUseAli=[84]
     whoUseXiaomi=[83]
     whoUsePutao=[23,58,71,66]
@@ -115,7 +115,7 @@ elif branch=='allp':
     channelIndex= {'chinamobile':1,'xiaomi':2,'ali':3,'letv':4,'putaogame':5,'lovegame':6,'dangbei':7}
     oldTags = alltags[0:len(alltags)-1]
     targetTag = alltags[len(alltags)-1]
-    #用不同更新素材的渠道id集合,1,3,37三个id废弃不用
+    #用不同更新素材的渠道id集合,37,88三个id废弃不用
     whoUseLetv=[4]
     whoUseChinamobile=[5]
     whoUseLovegame=[6]
