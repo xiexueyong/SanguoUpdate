@@ -160,6 +160,11 @@ def lovegameProject():
     mPThandlerPath = win_projectPath+"/plateformFile/handler/PTHandler.java_lovegame"
     mPThandlerTargetPath = win_projectPath+"/templates/android/template/src/com/putao/PtSanguo/PTHandler.java"
     PTHandlerModefied(mPThandlerPath,mPThandlerTargetPath)
+    #"plateformFile/goodsitems/diamondGoodItems.xml
+    print u"diamondGoodItems.xml替换\n"
+    mGoodItemsPath = win_projectPath+"/plateformFile/goodsitems/diamondGoodItems_aiyouxi.xml"
+    mGoodItemsTargetPath = win_projectPath+"/assets/data/item/diamondGoodItems.xml"
+    GoodsItemsModefied(mGoodItemsPath,mGoodItemsTargetPath)
     
 def dangbeiProject():
     #AndroidManifest替换
@@ -189,7 +194,8 @@ def manifestModefied(sourceDir,targetDir):
 def PTHandlerModefied(sourceDir,targetDir):
     shutil.copyfile(sourceDir,targetDir)
 def GoodsItemsModefied(sourceDir,targetDir):
-    shutil.copyfile(sourceDir,targetDir)
+    #shutil.copyfile(sourceDir,targetDir)
+    pass
 
 def projectModefied(sourceDir,targetDir):
     shutil.copyfile(sourceDir,targetDir)
