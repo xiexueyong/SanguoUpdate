@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 from gitutil import gitUtil # getCurBranch
 
-branch='dataeyeUpdate'#'dataeyeUpdate'  '720' 'allp'
+branch='allp'#'dataeyeUpdate'  '720' 'allp'
 if gitUtil.getCurBranch() != branch:
     print '不在指定的分支，请重新指定分支'
     branch='错误'
@@ -110,9 +110,10 @@ elif branch=='allp':
     #版本tag集合
     alltags = ['v1.5.6d']
     #所有的渠道名
-    channels = ['lovegame','putaogame','dangbei','xiaomi','ali','chinamobile','letv']
+    #channels = ['lovegame','putaogame','dangbei','xiaomi','ali','chinamobile','letv','atet']
+    channels = ['atet']
     #用于切换渠道
-    channelIndex= {'chinamobile':1,'xiaomi':2,'ali':3,'letv':4,'putaogame':5,'lovegame':6,'dangbei':7}
+    channelIndex= {'chinamobile':1,'xiaomi':2,'ali':3,'letv':4,'putaogame':5,'lovegame':6,'dangbei':7,'atet':8}
     oldTags = alltags[0:len(alltags)-1]
     targetTag = alltags[len(alltags)-1]
     #用不同更新素材的渠道id集合,37,88三个id废弃不用
