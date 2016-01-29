@@ -18,7 +18,7 @@ def processOneChannelAPK(channelId,version,apkurl,md5,ws):
     ws.cell('D%d'%upgradeitemCount).value = apkurl
     ws.cell('E%d'%upgradeitemCount).value = md5
     ws.cell('F%d'%upgradeitemCount).value = time.strftime("%Y-%m-%d %H:%M:%S")
-    print apkurl
+    #print apkurl
     
     global upgradeitemCount
     upgradeitemCount = upgradeitemCount + 1
@@ -45,13 +45,19 @@ def createUpgradeExcel():
     for i in range(2,channelws.max_row+1):
         channelName = channelws.cell(row = i, column = 3).value
         channelId = channelws.cell(row = i, column = 1).value
-        fn = 'bltx-%s-%s.apk'%(targetTag,channelName)
-        localurl = win_targetApkPath+fn
+        fn = 'Binglintianxia_Release_151217_v2.0.0b_%s.apk'%(channelName)
+        localurl = ur'E:/Binglintianxia2.0.0/'+fn
         ftpurl = apkPreFtpURL+fn  
-        md5 = '11111111'#getMD5(localurl) 
-        print channelName
-        print channelId
-        processOneChannelAPK(channelId,targetTag,ftpurl,md5,ws)
+        #print channelName
+        #print channelId
+        #print ftpurl
+        if not os.path.exists(localurl):
+            print fn
+            continue
+        md5 = getMD5(localurl) 
+       
+        processOneChannelAPK(channelId,'v2.0.0b',ftpurl,md5,ws)
         
-    wb.save(win_updateFilePath+'/core_upgrade.xlsx')         
+    wb.save(win_updateFilePath+'/core_upgrade.xlsx')
+    print win_updateFilePath         
 createUpgradeExcel()

@@ -177,6 +177,11 @@ def dangbeiProject():
     mProjectPath =win_projectPath+"/plateformFile/projectxml/Project_dangbei.xml"
     mProjectTargetPath = win_projectPath+"/Project.xml"
     projectModefied(mProjectPath,mProjectTargetPath)
+    #PTHandler.java替换
+    print u"PTHandler.java替换\n"
+    mPThandlerPath = win_projectPath +"/plateformFile/handler/PTHandler.java_putao"
+    mPThandlerTargetPath = win_projectPath +"/templates/android/template/src/com/putao/PtSanguo/PTHandler.java"
+    PTHandlerModefied(mPThandlerPath,mPThandlerTargetPath)
     #diamondGoodItems.xml
     #"plateformFile/goodsitems/diamondGoodItems.xml
     print u"diamondGoodItems.xml替换\n"
@@ -206,6 +211,76 @@ def atetProject():
     mGoodItemsPath = win_projectPath +"/plateformFile/goodsitems/diamondGoodItems_atet.xml"
     mGoodItemsTargetPath = win_projectPath +"/assets/data/item/diamondGoodItems.xml"
     GoodsItemsModefied(mGoodItemsPath,mGoodItemsTargetPath)
+    
+def phoneProject():
+    #AndroidManifest替换
+    print u"AndroidManifest替换\n"
+    mManifestPath = win_projectPath +"/plateformFile/manifast/AndroidManifest_phone.xml"
+    mManifestTargetPath = win_projectPath +"/templates/android/template/AndroidManifest.xml"
+    manifestModefied(mManifestPath,mManifestTargetPath)
+    #project替换
+    print u"progect替换\n"
+    mProjectPath =win_projectPath+ "/plateformFile/projectxml/Project_phone.xml"
+    mProjectTargetPath = win_projectPath+"/Project.xml"
+    projectModefied(mProjectPath,mProjectTargetPath)
+    #PTHandler.java替换
+    print u"PTHandler.java替换\n"
+    mPThandlerPath = win_projectPath +"/plateformFile/handler/PTHandler.java_putao"
+    mPThandlerTargetPath = win_projectPath +"/templates/android/template/src/com/putao/PtSanguo/PTHandler.java"
+    PTHandlerModefied(mPThandlerPath,mPThandlerTargetPath)
+
+    #diamondGoodItems.xml
+    #"plateformFile/goodsitems/diamondGoodItems.xml
+    print u"diamondGoodItems.xml替换\n"
+    mGoodItemsPath = win_projectPath +"/plateformFile/goodsitems/diamondGoodItems_pt.xml"
+    mGoodItemsTargetPath = win_projectPath +"/assets/data/item/diamondGoodItems.xml"
+    GoodsItemsModefied(mGoodItemsPath,mGoodItemsTargetPath)
+
+
+def unicomProject():
+    #AndroidManifest替换
+    print u"AndroidManifest替换\n"
+    mManifestPath = win_projectPath +"/plateformFile/manifast/AndroidManifest_unicom.xml"
+    #project替换
+    print u"progect替换\n"
+    mProjectPath =win_projectPath+ "/plateformFile/projectxml/Project_unicom.xml"
+    mProjectTargetPath = win_projectPath+"/Project.xml"
+    projectModefied(mProjectPath,mProjectTargetPath)
+    #PTHandler.java替换
+    print u"PTHandler.java替换\n"
+    mPThandlerPath = win_projectPath +"/plateformFile/handler/PTHandler.java_putao"
+    mPThandlerTargetPath = win_projectPath +"/templates/android/template/src/com/putao/PtSanguo/PTHandler.java"
+    PTHandlerModefied(mPThandlerPath,mPThandlerTargetPath)
+    #diamondGoodItems.xml
+    #"plateformFile/goodsitems/diamondGoodItems.xml
+    print u"diamondGoodItems.xml替换\n"
+    mGoodItemsPath = win_projectPath +"/plateformFile/goodsitems/diamondGoodItems_pt.xml"
+    mGoodItemsTargetPath = win_projectPath +"/assets/data/item/diamondGoodItems.xml"
+    GoodsItemsModefied(mGoodItemsPath,mGoodItemsTargetPath)
+
+def wangsuProject():
+    #AndroidManifest替换
+    print u"AndroidManifest替换\n"
+    mManifestPath = win_projectPath +"/plateformFile/manifast/AndroidManifest_wangsu.xml"
+    mManifestTargetPath = win_projectPath +"/templates/android/template/AndroidManifest.xml"
+    manifestModefied(mManifestPath,mManifestTargetPath)
+    #project替换
+    print u"progect替换\n"
+    mProjectPath =win_projectPath+ "/plateformFile/projectxml/Project_wangsu.xml"
+    mProjectTargetPath = win_projectPath+"/Project.xml"
+    projectModefied(mProjectPath,mProjectTargetPath)
+    #PTHandler.java替换
+    print u"PTHandler.java替换\n"
+    mPThandlerPath = win_projectPath +"/plateformFile/handler/PTHandler.java_putao"
+    mPThandlerTargetPath = win_projectPath +"/templates/android/template/src/com/putao/PtSanguo/PTHandler.java"
+    PTHandlerModefied(mPThandlerPath,mPThandlerTargetPath)
+    #diamondGoodItems.xml
+    #"plateformFile/goodsitems/diamondGoodItems.xml
+    print u"diamondGoodItems.xml替换\n"
+    mGoodItemsPath = win_projectPath +"/plateformFile/goodsitems/diamondGoodItems_pt.xml"
+    mGoodItemsTargetPath = win_projectPath +"/assets/data/item/diamondGoodItems.xml"
+    GoodsItemsModefied(mGoodItemsPath,mGoodItemsTargetPath)
+
 
     
 def assetCopy(sourceDir,targetDir):
@@ -277,6 +352,18 @@ def switch(type=5):
     if int(type) == 8:
         print u"开始:%s\n"%(type)
         atetProject()
+        print u"\n完成"
+    if int(type) == 11:
+        print u"开始:%s\n"%(type)
+        phoneProject()
+        print u"\n完成"
+    if int(type) == 12:
+        print u"开始:%s\n"%(type)
+        unicomProject()
+        print u"\n完成"
+    if int(type) == 13:
+        print u"开始:%s\n"%(type)
+        wangsuProject()
         print u"\n完成"
 
 

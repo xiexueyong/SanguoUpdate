@@ -14,14 +14,15 @@ def sqlWriteHandleChannel(DSHcontent,sqlurl,excelname):
     title = str(DSHcontent[1]).strip()
     slug = str(DSHcontent[2]).strip()
     version = str(DSHcontent[3]).strip()
+    version2 = str(DSHcontent[4]).strip()
 
 
     #print 3333,beautyid,type(beautyid)
     deleteQuery = u"delete from "+excelname+u" where id = %s ;"
     deleteparams = (id)
     deletesql = deleteQuery % deleteparams
-    insertQuery = u"insert into "+excelname+u"(id,title,slug,version) values (%s,'%s','%s','%s') ;"
-    insertparams = (id,title,slug,version)
+    insertQuery = u"insert into "+excelname+u"(id,title,slug,version,version2) values (%s,'%s','%s','%s','%s') ;"
+    insertparams = (id,title,slug,version,version2)
     insertsql = insertQuery % insertparams
     print  'insertsql:',insertsql
     sqlfilewrite.filewritesql(sqlurl,deletesql+'\n')
