@@ -270,6 +270,8 @@ def unicomProject():
     #AndroidManifest替换
     print u"AndroidManifest替换\n"
     mManifestPath = win_projectPath +"/plateformFile/manifast/AndroidManifest_unicom.xml"
+    mManifestTargetPath = win_projectPath +"/templates/android/template/AndroidManifest.xml"
+    manifestModefied(mManifestPath,mManifestTargetPath)
     #project替换
     print u"progect替换\n"
     mProjectPath =win_projectPath+ "/plateformFile/projectxml/Project_unicom.xml"

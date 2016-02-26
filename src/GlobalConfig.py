@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 from gitutil import gitUtil # getCurBranch
 
-branch='allp'# 'allp' 'mobileupdate'
+branch='mobileupdate'# 'allp' 'mobileupdate'
 if gitUtil.getCurBranch() != branch:
     print '不在指定的分支，请重新指定分支'
     branch='错误'
@@ -13,11 +13,11 @@ if branch=='allp':
     #是否是调试版so
     debug = False;
     #版本tag集合
-    #alltags = ['v2.0.0b','v2.0.1b','v2.0.2b','v2.0.3b','v2.0.4b','v2.0.5b','v2.0.6b','v2.0.7b','v2.0.8b','v2.0.9b']
-    alltags = ['v3.0.0b','v3.0.1b']
+    #alltags = ['v2.0.0b','v2.0.1b','v2.0.2b','v2.0.3b','v2.0.4b','v2.0.5b','v2.0.6b','v2.0.7b','v2.0.8b','v2.0.9b','v2.1.0b','v2.1.1b']
+    alltags = ['v3.0.0b','v3.0.1b','v3.0.2b','v3.0.3b']
     #所有的渠道名
-    channels = ['unicom','wangsu','lovegame','putaogame','dangbei','xiaomi','ali','chinamobile','letv','atet','phone']#'cybercloud','ysten',
-    #channels = ['ysten']
+    channels = ['unicom','wangsu','lovegame','putaogame','dangbei','xiaomi','ali','chinamobile','letv','atet','phone','ysten']#'cybercloud'
+    #channels = ['unicom']
     #用于切换渠道
     channelIndex= {'chinamobile':1,'xiaomi':2,'ali':3,'letv':4,'putaogame':5,'lovegame':6,'dangbei':7,'atet':8,'cybercloud':9,'ysten':10,'phone':11,'unicom':12,'wangsu':13}
     oldTags = alltags[0:len(alltags)-1]
@@ -33,12 +33,13 @@ if branch=='allp':
     whoUsePhone=[37,99]
     whoUseUnicom=[97]
     whoUseWangsu=[98]
+    whoUseYsten=[94]
     whoUsePutao=[1,2,7,8,9,10,11,12,13,14,15,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,34,35,36,38,
     39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,
     72,73,74,75,76,77,78,79,80,81,82,85,86,87,89,90,91,92,93,100]
-    useRelation = {'lovegame':whoUseLovegame,'ali':whoUseAli,'chinamobile':whoUseChinamobile,'xiaomi':whoUseXiaomi,'putaogame':whoUsePutao,'letv':whoUseLetv,'dangbei':whoUseDangbei,'atet':whoUseAtet,'phone':whoUsePhone,'unicom':whoUseUnicom,'wangsu':whoUseWangsu}
+    useRelation = {'ysten':whoUseYsten,'lovegame':whoUseLovegame,'ali':whoUseAli,'chinamobile':whoUseChinamobile,'xiaomi':whoUseXiaomi,'putaogame':whoUsePutao,'letv':whoUseLetv,'dangbei':whoUseDangbei,'atet':whoUseAtet,'phone':whoUsePhone,'unicom':whoUseUnicom,'wangsu':whoUseWangsu}
     #idHead从1或者100000开始，防止在本次更新期间有玩家升级上次的小更新。
-    idHead = 53998#上次是1438
+    idHead = 57300#上次是1438
     
     projectPath = '/cygdrive/e/workspace/PtSanguo_SVN'#项目目录
     diffAssetsPath = '/cygdrive/e/workspace/PtSanguo_SVN/releaseFold3'#存放差异文件的目录
@@ -65,7 +66,7 @@ elif branch=='mobileupdate':
     #是否是调试版so
     debug = False;
     #版本tag集合
-    alltags = ['v1.5.0b','v1.5.1b','v1.5.2b','v1.5.3b','v1.5.4b','v1.5.7b','v1.5.8b','v1.5.10b','v1.5.11b','v1.5.12b','v1.5.13b','v1.5.14b','v1.5.15b','v1.5.16b','v1.5.17b','v1.5.18b','v1.5.19b','v1.5.20b','v1.5.21b','v1.5.22b','v1.5.25b','v1.5.26b','v1.5.27b','v1.5.29b','v1.5.30b','v1.5.31b','v1.5.32b','v1.5.33b','v1.5.34b','v1.5.35b','v1.5.36b']
+    alltags = ['v1.5.0b','v1.5.1b','v1.5.2b','v1.5.3b','v1.5.4b','v1.5.7b','v1.5.8b','v1.5.10b','v1.5.11b','v1.5.12b','v1.5.13b','v1.5.14b','v1.5.15b','v1.5.16b','v1.5.17b','v1.5.18b','v1.5.19b','v1.5.20b','v1.5.21b','v1.5.22b','v1.5.25b','v1.5.26b','v1.5.27b','v1.5.29b','v1.5.30b','v1.5.31b','v1.5.32b','v1.5.33b','v1.5.34b','v1.5.35b','v1.5.36b','v1.5.37b','v1.5.38b']
     #所有的渠道名
     #channels = ['lovegame','putaogame','dangbei','xiaomi','ali','chinamobile','letv','atet']
     channels = ['chinamobile']
@@ -78,7 +79,7 @@ elif branch=='mobileupdate':
     #存储所有的使用关系
     useRelation = {'chinamobile':whoUseChinamobile}
     #idHead从1或者100000开始，防止在本次更新期间有玩家升级上次的小更新。
-    idHead = 53965#上次是1438
+    idHead = 58368#上次是1438
     
     projectPath = '/cygdrive/e/workspace/PtSanguo_SVN'#项目目录
     diffAssetsPath = '/cygdrive/e/workspace/PtSanguo_SVN/releaseFold4'#存放差异文件的目录
